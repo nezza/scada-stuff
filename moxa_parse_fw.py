@@ -23,6 +23,9 @@ FILE_INDICATORS = [
 ['\x00', '\x05', '!', '6', '\xe1', '\x07', '\x03', '\x07'],
 ['\x00', '\r', '2', '\x1b', '\xe1', '\x07', '\t', '\x01'],
 ['\x00', '\r', '4', '\x08', '\xe1', '\x07', '\t', '\x01'],
+['\x00', '\x12', '\x13', '\x04', '\xe1', '\x07', '\x02', '\x11'], # NP54x0
+['\x00', '\r', '9', '\x16', '\xd2', '\x07', '\x0c', '\x13'], # NP5400
+['\x00', '\x0f', ')', '\x08', '\xd7', '\x07', '\x01', '\x03'], # NP5400
 ]
 
 FILE_METADATA_INDICATOR_SHORT = ['\x00', '\x05']
@@ -70,6 +73,7 @@ with open(sys.argv[1], 'rb') as fwf:
 		if not d in FILE_INDICATORS:
 			#if d[:2] != FILE_METADATA_INDICATOR_SHORT:
 			print "\tReached end of file table"
+			print d
 			break
 
 		print "\tFilename: %s" % filename
