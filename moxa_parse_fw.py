@@ -107,7 +107,7 @@ with open(sys.argv[1], 'rb') as fwf:
 	OTHER_DATA_START = 0x00028b40
 	# Get position of binary data
 	fwf.seek(BINARY_FIRMWARE_LOCATION_POINTER)
-	binary_firmware_location = struct.unpack("<I", fwf.read(4))[0] + 0x20
+	binary_firmware_location = struct.unpack("<I", fwf.read(4))[0]
 	print "Firmware is at: 0x%08x" % binary_firmware_location
 
 	# header
