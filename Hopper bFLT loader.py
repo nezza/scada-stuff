@@ -61,13 +61,7 @@ if (flags & FLAGS_GOTPIC) == FLAGS_GOTPIC:
 	doc.log("Got GOT, not supported.")
 	raise ValueError("")
 
-doc.log("Entry is: 0x%x" % entry)
-doc.log("Data is: 0x%x" % data_start)
-doc.log("BSS is: 0x%x" % data_end)
-doc.log("reloc_start is: 0x%x" % reloc_start)
-doc.log("Reloc count: %d" % reloc_count)
-
-doc.log("Created File Segments: ")
+doc.log("Segments: ")
 doc.log("\t.text   0x%.8X - 0x%.8X" % (entry, data_start))
 doc.log("\t.data   0x%.8X - 0x%.8X" % (data_start, data_end))
 doc.log("\t.bss    0x%.8X - 0x%.8X" % (data_end, bss_end))
