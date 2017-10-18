@@ -1,5 +1,20 @@
 # scada-stuff
 
+## Hopper bFLT loader
+
+A lot of ICS devices use uClinux/eCos which uses the bFLT format. The `hopper_bflt_loader.py` implements basic bFLT support for Hopper. Open a binary with the settings:
+
+```
+Base address: 0x0
+Entry point: 0x0
+File offset: 0x0
+CPU: ARMv6 Little endian
+```
+
+and then run the script on it.
+
+The script is based on the IDA Pro loader written by Craig Heffner from Tactical Network Solutions
+
 ## moxa_parse_fw.py
 
 Extracts the firmware images of the simple Mgate and Nport devices without wireless capability.
@@ -45,4 +60,7 @@ Note that this only loads the Linux bootlaoder which uncompresses the kernel. Th
 
 Starting with firmware version 2 the firmware is encrypted.
 
+## Advantech ADAM 4570 Firmware
+
+The firmware file (e.g. `ADAM-4570-BE_FW_D1.70_268D671C.bin`) can be directly loaded into a disassembler.
 
