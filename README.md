@@ -40,7 +40,8 @@ File offset: 0x0
 CPU: ARMv6 Little endian
 ```
 
-The NPort devices with a Moxa labelled chip are based on the R8822 architecture.
+The NPort devices with a Moxa labelled chip are based on the [R8822](http://www.paradigmtools.com/docs/R8822.PDF) (Thanks [K. Reid Wightman](https://twitter.com/ReverseICS)!)
+ architecture.
 
 
 ## Moxa NPort W2150 Firmware
