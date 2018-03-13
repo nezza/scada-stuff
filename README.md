@@ -43,6 +43,15 @@ CPU: ARMv6 Little endian
 The NPort devices with a Moxa labelled chip are based on the [R8822](http://www.paradigmtools.com/docs/R8822.PDF) (Thanks [K. Reid Wightman](https://twitter.com/ReverseICS)!)
  architecture.
 
+## parse_upg.py
+
+Converts .upg firmware files as used by some Schneider Electric devices into a binary file that can be loaded into a disassembler.
+
+### Usage
+
+```
+parse_upg.py <firmware_file> <output_file>
+```
 
 ## Moxa NPort W2150 Firmware
 
